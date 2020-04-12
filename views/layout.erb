@@ -27,6 +27,14 @@
 							<a class="nav-link" href="/about">About </a>
 						</li>					
 					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form action="/cart" method="post">
+								<input type="hidden" id="orders_input" name="orders">
+								<input type="submit" class="btn btn-primary btn-lg" value="Cart..." id="orders_button">
+							</form>
+						</li>
+					</ul>
 				</div>
 			</nav>
 
@@ -46,6 +54,14 @@
 	<script src="jquery.simplecolorpicker.js"></script>
 	<link rel="stylesheet" href="jquery.simplecolorpicker.css">	
 	<script type="text/javascript" src="/scripts.js"></script>
+
+	<script>
+		$(function() {
+		update_orders_input();
+		update_orders_button();
+		});
+	</script>
+
   </body>
 </html>
 
